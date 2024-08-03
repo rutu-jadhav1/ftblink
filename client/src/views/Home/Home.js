@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
-import './Home.css'
 import axios from 'axios'
 import toast, { Toaster } from 'react-hot-toast'
+
+import './Home.css'
 
 function Home() {
     const [linkData, setLinkData] = useState({
@@ -11,6 +12,11 @@ function Home() {
     })
 
     const generateLink = async (req, res) => {
+       
+        if(!linkData.title || !linkData.target || !linkData.slug){
+            toast.error("Please Enter all details")
+            return
+        }
         const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/link`, linkData)
 
         if (response.data.success) {
@@ -20,7 +26,6 @@ function Home() {
                 target: "",
                 slug: ""
             })
-
         }
         else {
             toast.error(response.data.message);
@@ -28,8 +33,8 @@ function Home() {
     }
     return (
         <div>
-            <h1 className='heading'>Shorten the Web, Simplify Your World</h1>
-            <h2 className='heading'>Shrink, Share, Succeed</h2>
+            <p className='heading heading-style'>Shorten the Web, Simplify Your World</p>
+            <p className='heading heading-style'>Shrink, Share, Succeed</p>
             <form className='link-form'>
                 <input
                     type='text'
@@ -41,7 +46,7 @@ function Home() {
                             title: e.target.value
                         })
                     }}
-                    className='link-input'
+                    className='link-input text-style'
                 />
 
                 <input
@@ -54,7 +59,7 @@ function Home() {
                             target: e.target.value
                         })
                     }}
-                    className='link-input'
+                    className='link-input text-style'
                 />
                 <input
                     type='text'
@@ -66,10 +71,10 @@ function Home() {
                             slug: e.target.value
                         })
                     }}
-                    className='link-input'
+                    className='link-input text-style'
                 />
 
-                <button type='button' className='link-btn' onClick={generateLink}>Generate</button>
+                <button type='button' className='link-btn text-style' onClick={generateLink}>Generate</button>
             </form>
             <Toaster />
         </div>

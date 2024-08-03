@@ -1,3 +1,4 @@
+
 .heading{
     text-align: center;
 }
@@ -5,13 +6,30 @@
     display: block;
     margin: 10px auto;
     width: 80%;
-    padding: 3px 5px;
+    padding: 5px 8px;
+    border-radius: 5px;
+    border: 1px solid rgb(8, 14, 12);    
 }
 .link-form{
     display: block;
     margin: 0 auto;
-    width: 600px;
+    width: 750px;
     padding: 20px;
-    background-color: aquamarine;
+    background-color: #faeee7;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.link-btn{
+    display: block;
+    margin: 15px auto;
+    padding: 5px 10px;
+    border: 1px solid rgb(8, 14, 12);
+    width: 160px;
+    background-color: #ffc6c7;
+    cursor: pointer;
+}
+.link-btn:hover{
+    transition: 0.5s;
+    background-color: #ff8ba7;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
 }
