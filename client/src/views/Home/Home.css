@@ -1,0 +1,17 @@
+.heading{
+    text-align: center;
+}
+.link-input{
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+    padding: 3px 5px;
+}
+.link-form{
+    display: block;
+    margin: 0 auto;
+    width: 600px;
+    padding: 20px;
+    background-color: aquamarine;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
