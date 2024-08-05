@@ -10,6 +10,8 @@
 }
 .link-card-target{
     margin: 0;
+    text-decoration: none;
+    color: rgb(79, 77, 77);
 }
 .link-card-view{
     position: absolute;
