@@ -1,4 +1,15 @@
 import Link from "./../models/Link.js";
+
+
+const getAllLinks = async (req,res) =>{
+    const allLinks = await Link.find()
+    res.json({
+        success : true,
+        data : allLinks,
+        message : "All Link fetched successfully"
+    })
+}
+
 const postLink = async (req,res) => {
     const {target, slug, title} = req.body;
 
@@ -31,6 +42,6 @@ const getRedirected = async (req,res)=>{
     await link.save()
     
     res.redirect(link.target)
-
 }
-export {postLink, getRedirected};
+
+export {postLink, getRedirected, getAllLinks};

@@ -4,7 +4,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 dotenv.config();
 
-import { postLink, getRedirected } from './controllers/link.js';
+import { postLink, getRedirected , getAllLinks} from './controllers/link.js';
 
 
 const app = express();
@@ -25,6 +25,7 @@ app.get("/health", (req,res)=>{
         message : "FTP Link Web"
     })
 })
+app.get("/alllink", getAllLinks);
 
 app.post("/link", postLink);
 
