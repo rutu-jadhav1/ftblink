@@ -5,6 +5,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 import { postLink, getRedirected , getAllLinks} from './controllers/link.js';
+import { PostRegister } from './controllers/user.js';
 
 
 const app = express();
@@ -30,6 +31,8 @@ app.get("/alllink", getAllLinks);
 app.post("/link", postLink);
 
 app.get("/:slug", getRedirected);
+
+app.post("/signup", PostRegister);
 
 
 const PORT = process.env.PORT || 5000;
