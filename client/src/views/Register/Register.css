@@ -1,6 +1,6 @@
 .register-form{
     max-width: 700px;
-    margin: 80px auto;
+    margin: 50px auto;
     background-color: #faeee7;
     padding: 40px;
     box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
@@ -13,7 +13,10 @@
     height: 45px;
     margin-left: 10px;
 }
-
+.register-input{
+    padding: 9px;
+    margin: 6px auto;
+}
 .register-btn{
     display: block;
     margin: 0 auto;
