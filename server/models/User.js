@@ -20,7 +20,7 @@ const userSchema = new Schema({
     },
     profession : {
         type : String,
-        require : true,
+        required : true,
     }
 },{
     timestamps : true
