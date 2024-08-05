@@ -1,0 +1,24 @@
+.link-card-container{
+    background-color: #ffc6c7;
+    margin: 25px;
+    padding: 5px 10px;
+    position: relative;
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.2);
+}
+.link-card-title{
+    margin: 0;
+}
+.link-card-target{
+    margin: 0;
+}
+.link-card-view{
+    position: absolute;
+    top: 0;
+    right: 18px;
+    font-size: 22px;
+}
+.link-card-date{
+    position: absolute;
+    bottom: 0;
+    right: 18px;
+}
