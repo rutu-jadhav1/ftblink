@@ -7,7 +7,7 @@ function LinkCard({ title, slug, target, views, createdAt }) {
     const shortURL = `${process.env.REACT_APP_BACKEND_URL}/${slug}`
     return (
         <div className='link-card-container'>
-            <h3 className='link-card-title'>{title}</h3>
+            <h3 className='link-card-title'>{title || 'No Title'}</h3>
                 <a href={shortURL} target='_blank' className='link-card-target'>
                     <img src={shortImg} alt='ShortURL'className='link-card-img'/>{shortURL}
                 </a>
