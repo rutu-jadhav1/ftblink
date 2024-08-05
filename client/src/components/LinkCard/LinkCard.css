@@ -12,12 +12,23 @@
     margin: 0;
     text-decoration: none;
     color: rgb(79, 77, 77);
+    display: block;
+}
+.link-card-img{
+    height: 18px;
+    margin-right: 6px;
 }
 .link-card-view{
     position: absolute;
     top: 0;
     right: 18px;
     font-size: 22px;
+}
+.link-card-view-text{
+    position: absolute;
+    top: 24px;
+    right: 18px;
+    font-size: 18px;
 }
 .link-card-date{
     position: absolute;
