@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import toast, { Toaster } from 'react-hot-toast'
 
 import './Home.css'
+import LinkCard from '../../components/LinkCard/LinkCard'
 
 function Home() {
     const [linkData, setLinkData] = useState({
@@ -31,6 +32,20 @@ function Home() {
             toast.error(response.data.message);
         }
     }
+
+    const [userLink, setUserLink] = useState([])
+
+    const loadLinks = async (req,res)=>{
+        toast.loading("Loading all links....");
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/alllink`);
+        toast.dismiss();
+        toast.success("All Link Fetched");
+        setUserLink(response.data.data);
+    }
+
+    useEffect(()=>{
+        loadLinks();
+    },[])
     return (
         <div>
             <p className='heading heading-style'>Shorten the Web, Simplify Your World</p>
@@ -81,6 +96,12 @@ function Home() {
                 </div>
                 <div className='alllinks-container'>
                     <h2 style={{textAlign: 'center'}}>My Links</h2>
+                    {
+                        userLink.map((link , i)=>{
+                            const {title,slug,target,views,createdAt} = link;
+                            return <LinkCard key={i} title={title} slug={slug} target={target} views={views} createdAt={createdAt}/>
+                        })
+                    }
                 </div>
             </div>
             <Toaster />
