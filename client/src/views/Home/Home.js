@@ -12,8 +12,8 @@ function Home() {
     })
 
     const generateLink = async (req, res) => {
-       
-        if(!linkData.title || !linkData.target || !linkData.slug){
+
+        if (!linkData.title || !linkData.target || !linkData.slug) {
             toast.error("Please Enter all details")
             return
         }
@@ -35,47 +35,54 @@ function Home() {
         <div>
             <p className='heading heading-style'>Shorten the Web, Simplify Your World</p>
             <p className='heading heading-style'>Shrink, Share, Succeed</p>
-            <form className='link-form'>
-                <input
-                    type='text'
-                    placeholder='Enter Title '
-                    value={linkData.title}
-                    onChange={(e) => {
-                        setLinkData({
-                            ...linkData,
-                            title: e.target.value
-                        })
-                    }}
-                    className='link-input text-style'
-                />
+            <div className='link-main-container'>
+                <div>
+                    <form className='link-form'>
+                        <input
+                            type='text'
+                            placeholder='Enter Title '
+                            value={linkData.title}
+                            onChange={(e) => {
+                                setLinkData({
+                                    ...linkData,
+                                    title: e.target.value
+                                })
+                            }}
+                            className='link-input text-style'
+                        />
 
-                <input
-                    type='text'
-                    placeholder='Enter Target URL '
-                    value={linkData.target}
-                    onChange={(e) => {
-                        setLinkData({
-                            ...linkData,
-                            target: e.target.value
-                        })
-                    }}
-                    className='link-input text-style'
-                />
-                <input
-                    type='text'
-                    placeholder='Enter slug '
-                    value={linkData.slug}
-                    onChange={(e) => {
-                        setLinkData({
-                            ...linkData,
-                            slug: e.target.value
-                        })
-                    }}
-                    className='link-input text-style'
-                />
+                        <input
+                            type='text'
+                            placeholder='Enter Target URL '
+                            value={linkData.target}
+                            onChange={(e) => {
+                                setLinkData({
+                                    ...linkData,
+                                    target: e.target.value
+                                })
+                            }}
+                            className='link-input text-style'
+                        />
+                        <input
+                            type='text'
+                            placeholder='Enter slug '
+                            value={linkData.slug}
+                            onChange={(e) => {
+                                setLinkData({
+                                    ...linkData,
+                                    slug: e.target.value
+                                })
+                            }}
+                            className='link-input text-style'
+                        />
 
-                <button type='button' className='link-btn text-style' onClick={generateLink}>Generate</button>
-            </form>
+                        <button type='button' className='link-btn text-style' onClick={generateLink}>Generate</button>
+                    </form>
+                </div>
+                <div className='alllinks-container'>
+                    <h2 style={{textAlign: 'center'}}>My Links</h2>
+                </div>
+            </div>
             <Toaster />
         </div>
     )
