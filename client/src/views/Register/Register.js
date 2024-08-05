@@ -3,6 +3,7 @@ import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
 import './Register.css'
 import registerlogo from './register.png'
+import { Link } from 'react-router-dom'
 
 function Register() {
     return (
@@ -40,6 +41,7 @@ function Register() {
                 </div>
 
                 <button type="button" className="register-btn">Register</button>
+                <Link to='/login' className='register-pg-link'>Already have account? <span className='pg-link-nm'>Login</span></Link>
             </form>
         </div>
     )

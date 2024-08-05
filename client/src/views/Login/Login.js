@@ -2,8 +2,8 @@ import React from 'react'
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
 import './../Register/Register.css'
-import './Login.css'
 import loginUser from './user.png'
+import { Link } from 'react-router-dom'
 
 function Login() {
   return (
@@ -23,7 +23,7 @@ function Login() {
                     <input type="password" className="form-control register-input" id="exampleInputPassword1" placeholder="Password" />
                 </div>
                 <button type="button" className="register-btn">Login</button>
-                <a href='/register' className='register-pg-link'>Don't have account? Register here</a>
+                <Link to='/register' className='register-pg-link'>Don't have account? <span className='pg-link-nm'>Register</span></Link>
         </form>
     </div>
   )

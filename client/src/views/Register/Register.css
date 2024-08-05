@@ -26,10 +26,19 @@
     background-color: #ffc6c7;
     border: 1px solid rgb(8, 14, 12);
     cursor: pointer;
+    margin-bottom: 15px;
 }
 .register-btn:hover{
     transition: 0.5s;
     background-color: #ff8ba7;
     border-top-left-radius: 30px;
     border-bottom-right-radius: 30px;
+}
+.register-pg-link{
+    margin-left: 180px;
+    color: black;
+    text-decoration: none;
+}
+.pg-link-nm{
+    color: blue;
 }
