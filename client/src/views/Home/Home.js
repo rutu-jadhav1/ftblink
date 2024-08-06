@@ -4,6 +4,7 @@ import toast, { Toaster } from 'react-hot-toast'
 
 import './Home.css'
 import LinkCard from '../../components/LinkCard/LinkCard'
+import Navbar from '../../components/Navbar/Navbar'
 
 function Home() {
     const [linkData, setLinkData] = useState({
@@ -48,6 +49,7 @@ function Home() {
     },[])
     return (
         <div>
+            <Navbar/>
             <p className='heading heading-style'>Shorten the Web, Simplify Your World</p>
             <p className='heading heading-style'>Shrink, Share, Succeed</p>
             <div className='link-main-container'>

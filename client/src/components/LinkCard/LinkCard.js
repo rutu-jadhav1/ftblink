@@ -4,7 +4,9 @@ import shortImg from './short.png'
 import targetImg from './target.png'
 
 function LinkCard({ title, slug, target, views, createdAt }) {
+    
     const shortURL = `${process.env.REACT_APP_BACKEND_URL}/${slug}`
+
     return (
         <div className='link-card-container'>
             <h3 className='link-card-title'>{title || 'No Title'}</h3>
