@@ -12,8 +12,10 @@ function Home() {
         target: "",
         slug: ""
     })
-
-    const generateLink = async (req, res) => {
+    const [user, setUser] = useState('')
+    const [userLink, setUserLink] = useState([])
+  
+    const generateLink = async () => {
 
         if (!linkData.title || !linkData.target || !linkData.slug) {
             toast.error("Please Enter all details")
@@ -34,22 +36,40 @@ function Home() {
         }
     }
 
-    const [userLink, setUserLink] = useState([])
+    useEffect(() => {
+        const currentUser = JSON.parse(localStorage.getItem('currentUser'))
+    
+        if (currentUser) {
+          setUser(currentUser)
+        }
+    
+        if (!currentUser) {
+          window.location.href = '/login'
+        }
+      }, [])
+      
+        console.log(user._id)
 
-    const loadLinks = async (req,res)=>{
+    const loadLinks = async ()=>{
+        if(!user || !user._id){
+            return
+        }
         toast.loading("Loading all links....");
-        const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/alllink`);
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/alllink?userId=${user._id}`);
         toast.dismiss();
         toast.success("All Link Fetched");
         setUserLink(response.data.data);
     }
-
+    
     useEffect(()=>{
         loadLinks();
-    },[])
+    },[user])
+
     return (
         <div>
             <Navbar/>
+            <h2>Hello {user.fullName}</h2>
+           
             <p className='heading heading-style'>Shorten the Web, Simplify Your World</p>
             <p className='heading heading-style'>Shrink, Share, Succeed</p>
             <div className='link-main-container'>

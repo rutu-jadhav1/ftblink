@@ -18,6 +18,11 @@ import { Schema, model } from "mongoose";
     views : {
         type : Number,
         default : 0,
+    },
+    user : {
+        type : Schema.Types.ObjectId,
+        ref : "User",
+        require : true
     }
  },{
     timestamps : true

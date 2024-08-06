@@ -1,47 +1,70 @@
+import User from "./../models/User.js";
 import Link from "./../models/Link.js";
 
 
-const getAllLinks = async (req,res) =>{
-    const allLinks = await Link.find()
+const getAllLinks = async (req, res) => {
+    const {userId} = req.query
+    console.log('userId', userId)
+    
+    const user = await User.findById(userId);
+
+    if (!user) {
+        return res.json({
+            success: false,
+            data: null,
+            message: "User not found"
+        })
+    }
+
+    const allLinks = await Link.find({ user : userId }).sort({ createdAt : -1 })
     res.json({
-        success : true,
-        data : allLinks,
-        message : "All Link fetched successfully"
+        success: true,
+        data: allLinks,
+        message: "All Link fetched successfully"
     })
 }
 
-const postLink = async (req,res) => {
-    const {target, slug, title} = req.body;
+const postLink = async (req, res) => {
+    const { target, slug, title, user } = req.body;
 
     const link = new Link({
         target,
         slug,
-        title        
+        title,
+        user
     })
+    try {
+        const savedLink = await link.save();
 
-    const savedLink = await link.save();
-    
-    res.json({
-        success : true,
-        data : savedLink,
-        message : "Link created successfully...!"
-    })
+        res.json({
+            success: true,
+            data: savedLink,
+            message: "Link created successfully...!"
+        })
+    }
+    catch (e) {
+        res.json({
+            success: false,
+            data: null,
+            message: e.message
+        })
+    }
 }
 
-const getRedirected = async (req,res)=>{
-    const {slug} = req.params;
-    const link = await Link.findOne({slug})
+const getRedirected = async (req, res) => {
+    const { slug } = req.params;
+    const link = await Link.findOne({ slug })
 
-    if (!link){
+    if (!link) {
         return res.json({
-            success : false,
-            message : 'Link not found',
+            success: false,
+            message: 'Link not found',
         })
     }
     link.views = link.views + 1;
     await link.save()
-    
+
     res.redirect(link.target)
 }
 
-export {postLink, getRedirected, getAllLinks};
+export { postLink, getRedirected, getAllLinks };
