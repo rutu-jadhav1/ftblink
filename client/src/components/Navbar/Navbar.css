@@ -1,3 +1,12 @@
+.web-nm{
+    margin-left: 200px;
+}
 .nav-sec{
-    margin-left: auto;
+    margin-left: 500px;
+}
+.web-direc{
+    margin: 0 50px;
+}
+.logot{
+    cursor: pointer;
 }
