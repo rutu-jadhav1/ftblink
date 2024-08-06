@@ -6,6 +6,7 @@ import toast, {Toaster} from 'react-hot-toast'
 import axios from 'axios'
 
 import './../Register/Register.css'
+import Navbar from '../../components/Navbar/Navbar'
 
 
 function Login() {
@@ -32,6 +33,7 @@ function Login() {
   }
   return (
     <div>
+      <Navbar/>
         <form className='register-form text-style'>
                 <div className='register-name-container'>
                     <h2>Login Here</h2>

@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
-
-import './Register.css'
-import registerlogo from './register.png'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import toast, { Toaster } from 'react-hot-toast'
+
+import './Register.css'
+import registerlogo from './register.png'
+import Navbar from './../../components/Navbar/Navbar.js'
+
 
 function Register() {
     const [user, setUser] = useState({
@@ -41,6 +43,7 @@ function Register() {
     }
     return (
         <div>
+            <Navbar/>
             <form className='register-form text-style'>
                 <div className='register-name-container'>
                     <h2>Register Here</h2>
