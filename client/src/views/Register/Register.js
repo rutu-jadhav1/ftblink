@@ -7,6 +7,7 @@ import toast, { Toaster } from 'react-hot-toast'
 import './Register.css'
 import registerlogo from './register.png'
 import Navbar from './../../components/Navbar/Navbar.js'
+import Footer from '../../components/Footer/Footer.js'
 
 
 function Register() {
@@ -90,6 +91,7 @@ function Register() {
                 <Link to='/login' className='register-pg-link'>Already have account? <span className='pg-link-nm'>Login</span></Link>
                 <Toaster />
             </form>
+            <Footer/>
         </div>
     )
 }

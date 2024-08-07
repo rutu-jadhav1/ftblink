@@ -5,6 +5,7 @@ import toast, { Toaster } from 'react-hot-toast'
 import './Home.css'
 import LinkCard from '../../components/LinkCard/LinkCard'
 import Navbar from '../../components/Navbar/Navbar'
+import Footer from '../../components/Footer/Footer'
 
 function Home() {
     const [title, setTitle] = useState('')
@@ -67,9 +68,6 @@ function Home() {
     return (
         <div>
             <Navbar />
-            <h2>Hello {user.fullName}</h2>
-
-            <p className='heading heading-style'>Shorten the Web, Simplify Your World</p>
             <p className='heading heading-style'>Shrink, Share, Succeed</p>
             <div className='link-main-container'>
                 <div>
@@ -117,6 +115,7 @@ function Home() {
                 </div>
             </div>
             <Toaster />
+            <Footer/>
         </div>
     )
 }
