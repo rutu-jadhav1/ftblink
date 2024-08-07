@@ -22,7 +22,7 @@ function Navbar() {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav nav-sec">
                         <li className="nav-item">
-                            <a className="nav-link web-direc" href="/main">Home</a>
+                            <a className="nav-link web-direc" href="#">Home</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link web-direc" href="/login">Login</a>
@@ -31,6 +31,9 @@ function Navbar() {
                         <span className='nav-link logot web-direc' onClick={logoutbt}>
                             Logout
                         </span>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link web-direc" href="/contact">Contact</a>
                         </li>
                        
                     </ul>
