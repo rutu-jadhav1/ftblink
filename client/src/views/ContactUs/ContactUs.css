@@ -5,6 +5,8 @@
     justify-content: space-around;
 }
 .contact-map{
+    width: 600px;
+    height: 450px;
     box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
 }
 .contact-form{
@@ -26,4 +28,22 @@
     transition: 0.5s;
     border-top-left-radius: 30px;
     border-bottom-right-radius: 30px;
+}
+
+
+@media screen and (max-width : 500px) {
+    .contact-container{
+        display: flex;
+        flex-direction: column;  
+        margin-bottom: 30px;
+        justify-content: space-around;
+    }
+    .contact-map{
+        width: 360px;
+        margin: 20px 40px;
+    }
+    .contact-form{
+        width: 360px;
+        margin: 20px 40px;
+    }
 }
