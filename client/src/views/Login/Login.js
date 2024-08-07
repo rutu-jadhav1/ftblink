@@ -7,6 +7,7 @@ import axios from 'axios'
 
 import './../Register/Register.css'
 import Navbar from '../../components/Navbar/Navbar'
+import Footer from '../../components/Footer/Footer'
 
 
 function Login() {
@@ -56,6 +57,7 @@ function Login() {
                 <Link to='/register' className='register-pg-link'>Don't have account? <span className='pg-link-nm'>Register</span></Link>
         </form>
         <Toaster/>
+        <Footer/>
     </div>
   )
 }
