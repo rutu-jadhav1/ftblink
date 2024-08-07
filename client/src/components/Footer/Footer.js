@@ -19,10 +19,10 @@ function Footer() {
                     <a href="mailto: 0103rutujajadhav@gmail.com" className="footer-contact footer-mail">
                         <img src={mail} alt='mail-img' height={'30px'} />  0103rutujajadhav@gmail.com
                     </a>
-                    <a href="tel: 9322484363" className="footer-contact">
+                    <a href="tel: 9322484363" className="footer-contact footer-contact-call">
                         <img src={call} alt='call-img' height={'30px'} />  9322484363
                     </a>
-                    <a href="#" className="footer-contact">
+                    <a href="#" className="footer-contact footer-contact-text">
                         <img src={map} alt='map-img' height={'30px'} /> Contact Us
                     </a>
                 </div>

@@ -72,6 +72,8 @@ function Home() {
             <div className='link-main-container'>
                 <div>
                     <form className='link-form'>
+                        <h2 className='text-style' style={{textAlign:'center'}}>Hello {user.fullName}👋</h2>
+                        <h5 className='user-sub-heading text-style' style={{marginTop: '30px'}}> 🔗Generate your Short Link here</h5>
                         <input
                             type='text'
                             placeholder='Enter Title '

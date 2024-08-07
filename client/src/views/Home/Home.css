@@ -7,9 +7,12 @@
     text-align: center;
     margin-top: -20px;
 }
+.user-sub-heading{
+    margin-bottom: 40px;
+}
 .link-input{
     display: block;
-    margin: 10px auto;
+    margin: 20px auto;
     width: 80%;
     padding: 5px 8px;
     border-radius: 5px;
@@ -17,6 +20,8 @@
 }
 .link-form{
     width: 620px;
+    height: 400px;
+    margin-top: 50px;
     padding: 20px;
     background-color: #faeee7;
     box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
