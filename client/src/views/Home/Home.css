@@ -1,7 +1,6 @@
 .link-main-container{
     display: flex;
     justify-content: space-around;
-    
 }
 .heading{
     text-align: center;
@@ -48,4 +47,19 @@
     max-height: 500px;
     overflow-y: scroll;
     margin-bottom: 30px;
+}
+
+@media screen and (max-width : 500px) {
+    .link-main-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .link-form{
+        margin: 20px 40px;
+        width: 360px;
+    }
+    .alllinks-container{
+        width: 360px;
+        margin: 20px 40px;
+    }
 }
