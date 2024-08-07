@@ -68,7 +68,7 @@ function Home() {
     return (
         <div>
             <Navbar />
-            <p className='heading heading-style'>Shrink, Share, Succeed</p>
+            <p className='heading heading-style'>Shrink 🔗, Share🤝, Succeed✅</p>
             <div className='link-main-container'>
                 <div>
                     <form className='link-form'>
