@@ -22,7 +22,7 @@ function Footer() {
                     <a href="tel: 9322484363" className="footer-contact footer-contact-call">
                         <img src={call} alt='call-img' height={'30px'} />  9322484363
                     </a>
-                    <a href="#" className="footer-contact footer-contact-text">
+                    <a href="/contact" className="footer-contact footer-contact-text">
                         <img src={map} alt='map-img' height={'30px'} /> Contact Us
                     </a>
                 </div>

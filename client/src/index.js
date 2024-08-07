@@ -6,6 +6,7 @@ import './global.css';
 import Home from './views/Home/Home';
 import Register from './views/Register/Register';
 import Login from './views/Login/Login';
+import ContactUs from './views/ContactUs/ContactUs';
 
 
 const router = createBrowserRouter([
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
   {
     path : '/login',
     element : <Login/>
+  },
+  {
+    path : '/contact',
+    element : <ContactUs/>
   }
 ])
 const root = ReactDOM.createRoot(document.getElementById('root'));
