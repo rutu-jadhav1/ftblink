@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import toast, { Toaster } from 'react-hot-toast'
 import './Navbar.css'
+import linkIm from './broken-link.png'
 
 function Navbar() {
     const [user, setUser] = useState('')
@@ -28,7 +29,7 @@ function Navbar() {
     return (
         <div>
             <nav className="navbar navbar-expand-lg shadow p-3 mb-5 rounded nav-c" >
-                <a className="navbar-brand web-nm" href="#">ShortenMe</a>
+                <a className="navbar-brand web-nm" href="#"><img src={linkIm} alt='linkImage' height={'30px'}/> ShortenMe</a>
                 <button className="navbar-toggler" type="button" onClick={toggleMenu} data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
