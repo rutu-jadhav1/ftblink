@@ -10,3 +10,9 @@
 .logot{
     cursor: pointer;
 }
+
+@media screen and (max-width : 500px){
+    .web-nm{
+        margin-left: 30px;
+    }
+}
