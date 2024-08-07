@@ -14,8 +14,8 @@ function LinkCard({ title, slug, target, views, createdAt, loadLinks }) {
 
     return (
         <div className='link-card-container'>
-            <h3 className='link-card-title'>{title || 'No Title'}</h3>
-            <a href={shortURL} target='_blank' className='link-card-target'>
+            <h3 className='link-card-title '>{title || 'No Title'}</h3>
+            <a href={shortURL} target='_blank' className='link-card-target url'>
                 <img src={shortImg} alt='ShortURL' className='link-card-img' />{shortURL}
             </a>
             <a href={target} target='_blank' className='link-card-target'>
