@@ -27,7 +27,7 @@ function Navbar() {
 
     return (
         <div>
-            <nav className="navbar navbar-expand-lg shadow p-3 mb-5 bg-white rounded" >
+            <nav className="navbar navbar-expand-lg shadow p-3 mb-5 rounded nav-c" >
                 <a className="navbar-brand web-nm" href="#">ShortenMe</a>
                 <button className="navbar-toggler" type="button" onClick={toggleMenu} data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
