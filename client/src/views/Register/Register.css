@@ -47,6 +47,7 @@
     .register-form{
         max-width: 360px;
         margin: 20px auto;
+        margin-bottom: 35px;
     }
     .register-img{
         margin-left: 0;

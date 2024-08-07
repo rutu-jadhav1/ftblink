@@ -14,3 +14,14 @@
 .footer-contact-call{
     margin-left: 150px;
 }
+
+
+@media screen and (max-width : 500px){
+    .footer-contact{
+        margin: auto 50px;
+    }
+    .footer-contact-text{
+        margin-left: 160px;
+        margin-right: 130px;
+    }
+}
