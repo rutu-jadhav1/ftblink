@@ -1,11 +1,16 @@
 import React from 'react'
+import { useEffect } from 'react'
 import "./LinkCard.css"
 import shortImg from './short.png'
 import targetImg from './target.png'
 
-function LinkCard({ title, slug, target, views, createdAt }) {
+function LinkCard({ title, slug, target, views, createdAt, loadLinks }) {
 
     const shortURL = `${process.env.REACT_APP_BACKEND_URL}/${slug}`
+    
+    useEffect(() => {
+        loadLinks();
+    }, [])
 
     return (
         <div className='link-card-container'>

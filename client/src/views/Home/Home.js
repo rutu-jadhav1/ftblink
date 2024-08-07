@@ -109,7 +109,7 @@ function Home() {
                     {
                         userLink.map((link, i) => {
                             const { title, slug, target, views, createdAt } = link;
-                            return <LinkCard key={i} title={title} slug={slug} target={target} views={views} createdAt={createdAt} />
+                            return <LinkCard key={i} title={title} slug={slug} target={target} views={views} createdAt={createdAt} loadLinks={loadLinks} />
                         })
                     }
                 </div>
