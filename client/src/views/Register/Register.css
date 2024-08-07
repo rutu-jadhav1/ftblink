@@ -42,3 +42,20 @@
 .pg-link-nm{
     color: blue;
 }
+
+@media screen and (max-width : 500px) {
+    .register-form{
+        max-width: 360px;
+        margin: 20px auto;
+    }
+    .register-img{
+        margin-left: 0;
+    }
+    .register-name-container{
+        display: flex;
+        margin-left: 40px;
+    }
+    .register-pg-link{
+        margin-left: 10px;
+    }
+}
