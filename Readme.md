@@ -3,9 +3,6 @@
 ---
 # Project-Title:  ShortenMe
 
----
-Welcome to RJ's Html & CSS & JS First Individual Project . ** Palavi_Beauty_Parlour** ,where dreams unfold into seamless celebrations.Bringing out the beauty in you !
-
 ## Introduction
 This turns long web addresses into short, neat links that are easier to share, especially on social media or in text messages.
 
